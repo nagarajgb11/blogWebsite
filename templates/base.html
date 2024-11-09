@@ -1,0 +1,30 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static "app.css" %}">
+    {%block css_files%}{%endblock%}
+</head>
+<header id="main-navigation">
+    <h1><a href="{% url "starting_pages"%}">My'Blog</a></h1>
+   <nav>
+        <a href="{% url "posts_page"%}">All Posts</a>
+        <a href="{%url "read-later" %}">Read Later</a>
+    </nav>
+    
+ </header>
+
+ 
+<body>
+    
+ 
+    {% block content %}
+    
+    {% endblock %}
+    
+</body>
+</html>
